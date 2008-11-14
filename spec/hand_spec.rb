@@ -11,6 +11,12 @@ describe Hand, "score" do
     @hand.score.should == 10
   end
 
+  it "should be 13 when dealt 8 and 5" do
+    @hand.deal 8
+    @hand.deal 5
+    @hand.score.should == 13
+  end
+
   it "should be 17 when dealt 7 and K" do
     @hand.deal 7
     @hand.deal :king
@@ -41,18 +47,18 @@ describe Hand, "score" do
     @hand.should be_bonus
   end
 
-  it "should be bonus when dealt 6, 7, 8" do
-    @hand.deal 6
-    @hand.deal 7
-    @hand.deal 8
-    @hand.should be_bonus
-  end
-
   it "should not be bonus when dealt 5, 7, 9" do
     @hand.deal 5
     @hand.deal 7
     @hand.deal 9
     @hand.should_not be_bonus
+  end
+
+  it "should be bonus when dealt 6, 7, 8" do
+    @hand.deal 6
+    @hand.deal 7
+    @hand.deal 8
+    @hand.should be_bonus
   end
 
   it "should be 12 when dealt A, A" do
