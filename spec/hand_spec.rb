@@ -1,5 +1,17 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
+## This is an exercise to get you into the red-green-refactor rhythm
+## of BDD.  Run this file with:
+
+##          ruby spec/hand_spec.rb
+
+## You will see an error message stating that a method doesn't exist.
+## Write the minimum amount of code necessary to get past the error.
+## Eventually, you will have a fully passing example (you will see a
+## . instead of an F on the screen).  When you get to that point, look
+## at your code to see if there are any ways you can refactor it
+## before moving on to the next example
+
 describe Hand, "score" do
   before(:each) do
     @hand = Hand.new
