@@ -62,8 +62,13 @@ describe Hand, "score" do
   end
 
   it "should be 12 when dealt A, A" do
-    @hand.deal :ace
-    @hand.deal :ace
+    2.times { @hand.deal :ace }
+    @hand.score.should == 12
+  end
+
+  it "should be 12 when dealt A, A, J" do
+    2.times { @hand.deal :ace }
+    @hand.deal :jack
     @hand.score.should == 12
   end
 end
