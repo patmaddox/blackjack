@@ -7,6 +7,7 @@ Given /^I have \$(\d+)$/ do |amount|
 end
 
 Given /^I bet \$(\d+)$/ do |amount|
+  raise "Implement the 'adding a player' example in spec/game_spec.rb, and '#wager' spec/player_spec.rb before proceeding"
   @game.add_player(@player, amount.to_i)
 end
 
@@ -21,6 +22,7 @@ Given /^the dealer is dealt (a|an) (\S+)$/ do |ignore_article, card|
 end
 
 When /^the dealer looks at the hands$/ do
+  raise "Implement the 'setting the deck' and 'when finished' examples in spec/game_spec.rb, and '#pay' in spec/player_spec.rb"
   @dealer_cards ||= [2] * @player_cards.size
   @game.deck = @player_cards.zip(@dealer_cards).flatten
   @game.deal
