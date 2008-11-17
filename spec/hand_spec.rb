@@ -72,9 +72,3 @@ describe Hand, "score" do
     @hand.score.should == 12
   end
 end
-
-describe Hand, "wager" do
-  it "should return the value it was created with" do
-    Hand.new(10).wager.should == 10
-  end
-end
