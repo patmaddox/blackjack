@@ -1,0 +1,8 @@
+begin
+  require 'autotest/growl'
+rescue LoadError
+  $stderr.puts "***************"
+  $stderr.puts "Couldn't load autotest/growl. If you want nifty growl notifications, gem install autotest-growl"
+  $stderr.puts "***************"
+  $stderr.puts ""
+end
