@@ -53,6 +53,11 @@ describe Hand, "score" do
     @hand.deal 9
     @hand.should_not be_bonus
   end
+  
+  it "should not be bonus when dealt 5, 5, 5" do
+    3.times { @hand.deal 5 }
+    @hand.should_not be_bonus
+  end
 
   it "should be bonus when dealt 6, 7, 8" do
     @hand.deal 6
