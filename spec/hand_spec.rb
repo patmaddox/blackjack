@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/spec_helper'
 ## This is an exercise to get you into the red-green-refactor rhythm
 ## of BDD.  Run this file with:
 
-##          ruby spec/hand_spec.rb
+##          rspec spec/hand_spec.rb
 
 ## You will see an error message stating that a method doesn't exist.
 ## Write the minimum amount of code necessary to get past the error.
@@ -63,6 +63,11 @@ describe Hand, "score" do
     @hand.deal 5
     @hand.deal 7
     @hand.deal 9
+    @hand.should_not be_bonus
+  end
+  
+  it "should not be bonus when dealt 5, 5, 5" do
+    3.times { @hand.deal 5 }
     @hand.should_not be_bonus
   end
 
